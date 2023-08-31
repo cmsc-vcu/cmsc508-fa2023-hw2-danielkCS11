@@ -1,5 +1,5 @@
 # Welcome to Homework 2
-(your name goes here!)
+Daniel Kim
 2023-08-31
 
 This is my solution to homework 2. I’m using Quarto render this document
@@ -22,9 +22,28 @@ Chen notation.
 
 *(remove this block and add your your solution here!)*
 
+<div>
+
+<div>
+
+<img src="README_files/figure-commonmark/dot-figure-1.png"
+style="width:7in;height:5in" />
+
+</div>
+
+</div>
+
 ## Design Task 2
 
 Identify and document the entities, attributes, and relationships using
 Crow’s Foot notation.
 
 *(remove this block and add your your solution here!)*
+
+:::: {.columns}
+
+::: {.column}
+<center>
+
+<img src="README_files/figure-commonmark/mermaid-figure-1.png"
+style="width:1.69in;height:3.33in" />

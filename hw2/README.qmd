@@ -1,7 +1,7 @@
 ---
 title: Welcome to Homework 2
-date: last-modified
-author: (your name goes here!)
+date: August 31 2023
+author: Daniel Kim
 format:
     gfm:
         mermaid-format: png
@@ -20,9 +20,51 @@ Identify and document the entities, attributes, and relationships using Chen not
 
 *(remove this block and add your your solution here!)*
 
+```{dot}
+//| echo: false
+graph ER {
+    layout=neato;
+  scale=1.5;
+    node [shape=box]; book; library_members;
+    node [shape=ellipse]; ISBN, title, publication_year, member_ID, name, contact_info
+    node [shape=diamond,style=filled,color=lightgrey]; checkout
+    
+    book -- checkout [label="n",len=1.00]
+    checkout -- library_members [label="1",len=1.50]
+    
+    book -- ISBN
+    book -- title
+    book -- publication_year
+  library_members -- name
+    library_members -- member_ID
+    library_members -- contact_info
+}
+```
+
 ## Design Task 2
 
 Identify and document the entities, attributes, and relationships using Crow’s Foot notation.
 
 *(remove this block and add your your solution here!)*
+
+:::: {.columns}
+
+::: {.column}
+<center>
+```{mermaid}
+%%| echo: false
+%%| eval: true
+erDiagram
+    library_members ||--o{ book : checkout
+    library_members {
+        string name
+        string member_ID
+        string contact_info
+    }
+    book {
+        int ISBN
+        string title
+        int publication_year
+    }
+```    
 
